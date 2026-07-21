@@ -27,8 +27,9 @@
 
           <ul class="nav-links">
             <li class="nav-link features-item">
-              <button class="dropdown-btn features-btn">
+              <button type="button" class="dropdown-btn features-btn">
                 Features
+
                 <img
                   src="./assets/images/icon-arrow-down.svg"
                   alt="arrow down"
@@ -38,12 +39,14 @@
               <ul class="dropdown-list features-dropdown">
                 <li class="dropdown-link">
                   <img src="./assets/images/icon-todo.svg" alt="todo" />
-                  <a href="#" aria-label="todo-list">Todo List</a>
+
+                  <a href="#" aria-label="todo-list"> Todo List </a>
                 </li>
 
                 <li class="dropdown-link">
                   <img src="./assets/images/icon-calendar.svg" alt="calendar" />
-                  <a href="#">Calendar</a>
+
+                  <a href="#"> Calendar </a>
                 </li>
 
                 <li class="dropdown-link">
@@ -51,18 +54,20 @@
                     src="./assets/images/icon-reminders.svg"
                     alt="reminders"
                   />
-                  <a href="#">Reminders</a>
+
+                  <a href="#"> Reminders </a>
                 </li>
 
                 <li class="dropdown-link">
                   <img src="./assets/images/icon-planning.svg" alt="planning" />
-                  <a href="#">Planning</a>
+
+                  <a href="#"> Planning </a>
                 </li>
               </ul>
             </li>
 
             <li class="nav-link company-item">
-              <button class="dropdown-btn company-btn">
+              <button type="button" class="dropdown-btn company-btn">
                 Company
 
                 <img
@@ -73,34 +78,37 @@
 
               <ul class="dropdown-list company-dropdown">
                 <li class="dropdown-link">
-                  <a href="#">History</a>
+                  <a href="#"> History </a>
                 </li>
 
                 <li class="dropdown-link">
-                  <a href="#">Our Team</a>
+                  <a href="#"> Our Team </a>
                 </li>
 
                 <li class="dropdown-link">
-                  <a href="#">Blog</a>
+                  <a href="#"> Blog </a>
                 </li>
               </ul>
             </li>
 
             <li class="nav-link">
-              <a href="#">Careers</a>
+              <a href="#"> Careers </a>
             </li>
 
             <li class="nav-link">
-              <a href="#">About</a>
+              <a href="#"> About </a>
             </li>
           </ul>
         </div>
 
-        <!-- DESKTOP BUTTONS -->
-        <div class="right-nav">
-          <button class="login">Login</button>
+        <!-- Desktop Login/Register -->
 
-          <button class="registration">Register</button>
+        <div class="right-nav">
+          <div class="registration">
+            <button type="button" class="login">Login</button>
+
+            <button type="button" class="register-btn">Register</button>
+          </div>
         </div>
 
         <img
@@ -112,6 +120,9 @@
     </header>
 
     <div class="overlay"></div>
+    <!-- ========================= -->
+    <!-- MOBILE MENU -->
+    <!-- ========================= -->
 
     <div class="mobile-menu">
       <img
@@ -122,64 +133,82 @@
 
       <ul>
         <li>
-          <button class="dropdown-btn mobile-features">
-            Features
+          <button type="button" class="dropdown-btn mobile-features">
+            <span>Features</span>
+
             <img src="./assets/images/icon-arrow-down.svg" alt="arrow down" />
           </button>
 
           <ul class="dropdown-list mobile-features-dropdown">
-            <li>
+            <li class="dropdown-link">
               <img src="./assets/images/icon-todo.svg" alt="todo" />
-              <a href="#" aria-label="todo-list">Todo List</a>
+
+              <a href="#" aria-label="todo-list"> Todo List </a>
             </li>
 
-            <li>
+            <li class="dropdown-link">
               <img src="./assets/images/icon-calendar.svg" alt="calendar" />
-              <a href="#">Calendar</a>
+
+              <a href="#"> Calendar </a>
             </li>
 
-            <li>
+            <li class="dropdown-link">
               <img src="./assets/images/icon-reminders.svg" alt="reminders" />
-              <a href="#">Reminders</a>
+
+              <a href="#"> Reminders </a>
             </li>
 
-            <li>
+            <li class="dropdown-link">
               <img src="./assets/images/icon-planning.svg" alt="planning" />
-              <a href="#">Planning</a>
+
+              <a href="#"> Planning </a>
             </li>
           </ul>
         </li>
 
         <li>
-          <button class="dropdown-btn mobile-company">
-            Company
+          <button type="button" class="dropdown-btn mobile-company">
+            <span>Company</span>
 
             <img src="./assets/images/icon-arrow-down.svg" alt="arrow down" />
           </button>
 
           <ul class="dropdown-list mobile-company-dropdown">
-            <li><a href="#">History</a></li>
-            <li><a href="#">Our Team</a></li>
-            <li><a href="#">Blog</a></li>
+            <li class="dropdown-link">
+              <a href="#"> History </a>
+            </li>
+
+            <li class="dropdown-link">
+              <a href="#"> Our Team </a>
+            </li>
+
+            <li class="dropdown-link">
+              <a href="#"> Blog </a>
+            </li>
           </ul>
         </li>
 
         <li>
-          <a href="#">Careers</a>
+          <a href="#"> Careers </a>
         </li>
 
         <li>
-          <a href="#">About</a>
+          <a href="#"> About </a>
         </li>
       </ul>
 
       <div class="mobile-buttons">
         <div class="registration">
-          <button type="button">Login</button>
-          <button type="button">Register</button>
+          <button type="button" class="login">Login</button>
+
+          <button type="button" class="register-btn">Register</button>
         </div>
       </div>
     </div>
+
+    <!-- ========================= -->
+    <!-- MAIN CONTENT -->
+    <!-- ========================= -->
 
     <main>
       <section class="hero">
@@ -195,10 +224,12 @@
         <div class="text-content">
           <h1>Make remote work</h1>
 
-          <!-- prettier-ignore -->
-          <p>Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar.</p>
+          <p>
+            Get your team in sync, no matter your location. Streamline
+            processes, create team rituals, and watch productivity soar.
+          </p>
 
-          <button class="learn-more">Learn More</button>
+          <button type="button" class="learn-more">Learn More</button>
 
           <div class="clients">
             <img src="./assets/images/client-databiz.svg" alt="Databiz" />
@@ -213,9 +244,13 @@
       </section>
     </main>
 
+    <!-- ========================= -->
+    <!-- FOOTER -->
+    <!-- ========================= -->
+
     <footer class="attribution">
       Challenge by
-      <a href="https://crio.do" target="_blank">Crio.do</a>
+      <a href="https://crio.do" target="_blank"> Crio.do </a>
     </footer>
 
     <script src="script.js"></script>
