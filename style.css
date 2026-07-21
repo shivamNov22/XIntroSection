@@ -374,28 +374,25 @@ main {
 
 .overlay {
   position: fixed;
-
-  top: 0;
-  left: 0;
-
-  width: 100vw;
-  height: 100vh;
+  inset: 0;
 
   background: rgba(0, 0, 0, 0.65);
 
   opacity: 0;
-
   visibility: hidden;
 
-  transition: opacity 0.3s;
+  pointer-events: none;
 
-  z-index: 1001;
+  z-index: 9998;
 }
 
 .overlay.active {
   opacity: 1;
   visibility: visible;
+
+  pointer-events: auto;
 }
+
 /* ========================= */
 /* MOBILE MENU */
 /* ========================= */
@@ -420,7 +417,7 @@ main {
 
   overflow-y: auto;
 
-  z-index: 2001;
+  z-index: 9999;
 }
 
 .mobile-menu.active {
@@ -435,8 +432,6 @@ main {
   gap: 18px;
 
   margin-top: 55px;
-
-  flex: 1; /* ADD */
 }
 .mobile-menu .dropdown-btn {
   width: 100%;
