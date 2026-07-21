@@ -375,7 +375,6 @@ main {
 .overlay {
   position: fixed;
   inset: 0;
-
   background: rgba(0, 0, 0, 0.65);
 
   opacity: 0;
@@ -383,13 +382,12 @@ main {
 
   pointer-events: none;
 
-  z-index: 9998;
+  z-index: 10000;
 }
 
 .overlay.active {
   opacity: 1;
   visibility: visible;
-
   pointer-events: auto;
 }
 

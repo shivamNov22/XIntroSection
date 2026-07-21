@@ -8,14 +8,11 @@ const closeMenu = document.querySelector(".close-menu");
 const mobileMenu = document.querySelector(".mobile-menu");
 const overlay = document.querySelector(".overlay");
 
-// Desktop Dropdown Buttons
-const featuresBtn = document.querySelector(".features-btn");
-const companyBtn = document.querySelector(".company-btn");
+// Desktop
+const featuresItem = document.querySelector(".features-item");
+const companyItem = document.querySelector(".company-item");
 
-const featuresDropdown = document.querySelector(".features-dropdown");
-const companyDropdown = document.querySelector(".company-dropdown");
-
-// Mobile Dropdown Buttons
+// Mobile
 const mobileFeaturesBtn = document.querySelector(".mobile-features");
 const mobileCompanyBtn = document.querySelector(".mobile-company");
 
@@ -33,12 +30,8 @@ const mobileCompanyDropdown = document.querySelector(
 
 function closeDesktopDropdowns() {
   featuresItem.classList.remove("link-open");
-
   companyItem.classList.remove("link-open");
 }
-
-const featuresItem = document.querySelector(".features-item");
-const companyItem = document.querySelector(".company-item");
 
 featuresItem.addEventListener("click", (e) => {
   e.stopPropagation();
@@ -63,26 +56,15 @@ companyItem.addEventListener("click", (e) => {
     companyItem.classList.add("link-open");
   }
 });
-companyBtn.addEventListener("click", (e) => {
-  e.stopPropagation();
-
-  const isOpen = companyDropdown.classList.contains("show");
-
-  closeDesktopDropdowns();
-
-  if (!isOpen) {
-    companyDropdown.classList.add("show");
-    companyBtn.classList.add("active");
-  }
-});
 
 // ===============================
 // MOBILE MENU
 // ===============================
 
 function openMobileMenu() {
-  mobileMenu.classList.add("active");
   overlay.classList.add("active");
+  mobileMenu.classList.add("active");
+  document.body.style.overflow = "hidden";
 }
 
 function closeMobileMenu() {
@@ -94,6 +76,8 @@ function closeMobileMenu() {
 
   mobileFeaturesBtn.classList.remove("active");
   mobileCompanyBtn.classList.remove("active");
+
+  document.body.style.overflow = "";
 }
 
 openMenu.addEventListener("click", openMobileMenu);
@@ -117,8 +101,7 @@ mobileFeaturesBtn.addEventListener("click", () => {
 
   if (!isOpen) {
     mobileFeaturesDropdown.classList.add("show");
-    const featuresItem = document.querySelector(".features-item");
-    const companyItem = document.querySelector(".company-item");
+    mobileFeaturesBtn.classList.add("active");
   }
 });
 
@@ -138,11 +121,26 @@ mobileCompanyBtn.addEventListener("click", () => {
 });
 
 // ===============================
-// CLOSE DESKTOP DROPDOWNS
+// CLOSE WHEN CLICK OUTSIDE
 // ===============================
 
 document.addEventListener("click", () => {
   closeDesktopDropdowns();
+});
+
+mobileMenu.addEventListener("click", (e) => {
+  e.stopPropagation();
+});
+
+// ===============================
+// ESC KEY
+// ===============================
+
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") {
+    closeDesktopDropdowns();
+    closeMobileMenu();
+  }
 });
 
 // ===============================
@@ -156,27 +154,11 @@ window.addEventListener("resize", () => {
 });
 
 // ===============================
-// ESC KEY SUPPORT
+// PREVENT DESKTOP DROPDOWN CLOSE
 // ===============================
 
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    closeDesktopDropdowns();
-    closeMobileMenu();
-  }
-});
-
-// ===============================
-// PREVENT DROPDOWN CLOSE
-// ===============================
-
-featuresDropdown.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
-
-companyDropdown.addEventListener("click", (e) => {
-  e.stopPropagation();
-});
+featuresItem.addEventListener("click", (e) => e.stopPropagation());
+companyItem.addEventListener("click", (e) => e.stopPropagation());
 
 // ===============================
 // INITIAL STATE
