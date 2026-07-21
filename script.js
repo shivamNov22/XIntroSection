@@ -48,7 +48,8 @@ featuresBtn.addEventListener("click", (e) => {
 
   if (!isOpen) {
     featuresDropdown.classList.add("show");
-    featuresBtn.classList.add("active");
+    const featuresItem = document.querySelector(".features-item");
+    const companyItem = document.querySelector(".company-item");
   }
 });
 
@@ -106,7 +107,8 @@ mobileFeaturesBtn.addEventListener("click", () => {
 
   if (!isOpen) {
     mobileFeaturesDropdown.classList.add("show");
-    mobileFeaturesBtn.classList.add("active");
+    const featuresItem = document.querySelector(".features-item");
+    const companyItem = document.querySelector(".company-item");
   }
 });
 

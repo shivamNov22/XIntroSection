@@ -238,7 +238,21 @@ header {
 }
 
 .overlay {
-  display: none;
+  position: fixed;
+
+  inset: 0;
+
+  background: rgba(0, 0, 0, 0.6);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  pointer-events: none;
+
+  transition: 0.3s;
+
+  z-index: 999;
 }
 /* ========================= */
 /* HERO SECTION */
@@ -506,6 +520,8 @@ main {
   opacity: 1;
 
   visibility: visible;
+
+  pointer-events: auto;
 }
 /* ========================= */
 /* RESPONSIVE */
@@ -693,4 +709,11 @@ a:focus-visible {
 
 .hero-image img {
   object-fit: contain;
+}
+.features-item.link-open .dropdown-list {
+  display: flex;
+}
+
+.company-item.link-open .dropdown-list {
+  display: flex;
 }
