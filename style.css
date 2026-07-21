@@ -372,6 +372,30 @@ main {
   text-decoration: underline;
 }
 
+.overlay {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(0, 0, 0, 0.65);
+
+  opacity: 0;
+
+  visibility: hidden;
+
+  transition: opacity 0.3s;
+
+  z-index: 1001;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
 /* ========================= */
 /* MOBILE MENU */
 /* ========================= */
@@ -481,30 +505,6 @@ main {
   right: 22px;
 
   cursor: pointer;
-}
-.overlay {
-  position: fixed;
-
-  top: 0;
-  left: 0;
-
-  width: 100vw;
-  height: 100vh;
-
-  background: rgba(0, 0, 0, 0.65);
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  transition: opacity 0.3s;
-
-  z-index: 1001;
-}
-
-.overlay.active {
-  opacity: 1;
-  visibility: visible;
 }
 
 /* ========================= */
