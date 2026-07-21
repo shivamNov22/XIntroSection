@@ -234,23 +234,6 @@ header {
   display: none;
 }
 
-.overlay {
-  position: fixed;
-
-  inset: 0;
-
-  background: rgba(0, 0, 0, 0.6);
-
-  opacity: 0;
-
-  visibility: hidden;
-
-  pointer-events: none;
-
-  transition: 0.3s;
-
-  z-index: 999;
-}
 /* ========================= */
 /* HERO SECTION */
 /* ========================= */
@@ -399,37 +382,13 @@ main {
 .mobile-menu {
   position: fixed;
   top: 0;
-  right: -100%;
-  width: 250px;
+  right: -260px;
+  width: 260px;
   height: 100vh;
-  background: #fff;
-  padding: 25px;
+  background: white;
   transition: 0.3s;
   z-index: 1000;
-  overflow-y: auto;
 }
-.mobile-menu {
-  position: fixed;
-
-  top: 0;
-
-  right: -100%;
-
-  width: 250px;
-
-  height: 100vh;
-
-  background: white;
-
-  padding: 25px;
-
-  z-index: 1000;
-
-  transition: 0.35s;
-
-  overflow-y: auto;
-}
-
 .mobile-menu.active {
   right: 0;
 }
@@ -477,13 +436,9 @@ main {
 }
 
 .mobile-buttons {
-  margin-top: 35px;
+  margin-top: auto;
 
-  display: flex;
-
-  flex-direction: column;
-
-  gap: 16px;
+  padding-top: 30px;
 }
 
 .mobile-buttons .login {
@@ -510,17 +465,12 @@ main {
 
 .overlay {
   position: fixed;
-
   inset: 0;
-
   background: rgba(0, 0, 0, 0.6);
-
   opacity: 0;
-
   visibility: hidden;
-
+  pointer-events: none;
   transition: 0.3s;
-
   z-index: 999;
 }
 
