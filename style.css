@@ -122,6 +122,7 @@ header {
 /* ========================= */
 
 .dropdown-list {
+  display: none;
   position: absolute;
 
   top: 42px;
@@ -230,10 +231,6 @@ header {
 }
 
 .close-menu {
-  display: none;
-}
-
-.mobile-menu {
   display: none;
 }
 
@@ -399,7 +396,18 @@ main {
 /* ========================= */
 /* MOBILE MENU */
 /* ========================= */
-
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 250px;
+  height: 100vh;
+  background: #fff;
+  padding: 25px;
+  transition: 0.3s;
+  z-index: 1000;
+  overflow-y: auto;
+}
 .mobile-menu {
   position: fixed;
 
@@ -715,5 +723,8 @@ a:focus-visible {
 }
 
 .company-item.link-open .dropdown-list {
+  display: flex;
+}
+.nav-link.link-open > .dropdown-list {
   display: flex;
 }

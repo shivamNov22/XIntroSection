@@ -32,27 +32,37 @@ const mobileCompanyDropdown = document.querySelector(
 // ===============================
 
 function closeDesktopDropdowns() {
-  featuresDropdown.classList.remove("show");
-  companyDropdown.classList.remove("show");
+  featuresItem.classList.remove("link-open");
 
-  featuresBtn.classList.remove("active");
-  companyBtn.classList.remove("active");
+  companyItem.classList.remove("link-open");
 }
 
-featuresBtn.addEventListener("click", (e) => {
+const featuresItem = document.querySelector(".features-item");
+const companyItem = document.querySelector(".company-item");
+
+featuresItem.addEventListener("click", (e) => {
   e.stopPropagation();
 
-  const isOpen = featuresDropdown.classList.contains("show");
+  const opened = featuresItem.classList.contains("link-open");
 
   closeDesktopDropdowns();
 
-  if (!isOpen) {
-    featuresDropdown.classList.add("show");
-    const featuresItem = document.querySelector(".features-item");
-    const companyItem = document.querySelector(".company-item");
+  if (!opened) {
+    featuresItem.classList.add("link-open");
   }
 });
 
+companyItem.addEventListener("click", (e) => {
+  e.stopPropagation();
+
+  const opened = companyItem.classList.contains("link-open");
+
+  closeDesktopDropdowns();
+
+  if (!opened) {
+    companyItem.classList.add("link-open");
+  }
+});
 companyBtn.addEventListener("click", (e) => {
   e.stopPropagation();
 
